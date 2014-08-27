@@ -10,3 +10,5 @@ Series of functional hooks to integrate GIT with AWS S3 via the AWS CLI and the 
 * **AWS S3 Instance** - 
 * **AWS Command Line Interface** – 
 * **AWS IAM Profile** -
+
+## Installation
