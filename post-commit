@@ -1,4 +1,5 @@
 #!/bin/bash
+# Place this file into the .git/hooks directory inside your project
 
 bucket="s3://{{s3_bucket_name}}";
 localPath="{{/path/to/local/filesystem}}";
