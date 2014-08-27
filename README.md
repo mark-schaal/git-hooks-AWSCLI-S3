@@ -12,3 +12,7 @@ Series of functional hooks to integrate GIT with AWS S3 via the AWS CLI and the 
 * **UNIX/Bash Compatible Environment** – 
 
 ## Installation
+
+
+## Usage
+Pretty straightforward. From your local machine, after very commit (as this hook is stored in .git/hooks/post-commit) the AWS CLI will connect to your specified S3 bucket with the credentials provided for the specified profile. It will then automate a secure, recursive copy protocol, and remove any files that do not currently exist on your local machine. This process will ignore any file specified, which by default is only the .git object.
