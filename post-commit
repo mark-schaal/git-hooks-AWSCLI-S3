@@ -1,0 +1,13 @@
+#!/bin/bash
+
+bucket="s3://{{s3_bucket_name}}";
+localPath="{{/path/to/local/filesystem}}";
+
+
+
+echo "Synchronizing commit to AWS Server...";
+
+aws --profile {{awscli_profile}} s3 sync $localPath $bucket --acl public-read --delete --exclude ".git/*";
+
+echo "Content synchronized successfully!";
+
