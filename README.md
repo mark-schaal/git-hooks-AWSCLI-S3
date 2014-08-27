@@ -15,4 +15,4 @@ Series of functional hooks to integrate GIT with AWS S3 via the AWS CLI and the 
 
 
 ## Usage
-Pretty straightforward. From your local machine, after very commit (as this hook is stored in .git/hooks/post-commit) the AWS CLI will connect to your specified S3 bucket with the credentials provided for the specified profile. It will then automate a secure, recursive copy protocol, and remove any files that do not currently exist on your local machine. This process will ignore any file specified, which by default is only the .git object.
+From a local machine, triggered after each GIT Commit (as this hook is stored in .git/hooks/post-commit), the AWS CLI will connect to a specified S3 bucket via profile specific credentials to automate a secure, recursive copy protocol. This process will remove any remote files that do not currently exist on the local machine, with the exception of any files or expressions declared in the ignore statement. By default, we strictly ignore the .git object and all of its children.
